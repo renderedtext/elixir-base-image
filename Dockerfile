@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 ENV TERM=xterm
 
-RUN apt-get update && apt-get install -y wget curl make iproute2 vim-tiny
+RUN apt-get update && apt-get install -y wget curl make iproute2 vim-tiny inotify-tools
 RUN wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && \
     dpkg -i erlang-solutions_1.0_all.deb
 RUN apt-get update && apt-get install -y erlang-dev elixir=1.4.4-1
