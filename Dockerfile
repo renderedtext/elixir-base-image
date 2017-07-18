@@ -1,7 +1,6 @@
 FROM ubuntu:16.04
 
 ENV TERM=xterm
-ENV MIX_ENV=prod
 
 RUN apt-get update && apt-get install -y wget curl make iproute2
 RUN wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && \
@@ -14,7 +13,6 @@ RUN export uid=1000 gid=1000 && \
     echo "developer:x:${uid}:" >> /etc/group && \
     chown ${uid}:${gid} -R /home/developer
 
-USER developer
 ENV HOME /home/developer
 WORKDIR /home/developer/prj
 
