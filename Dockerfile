@@ -4,7 +4,8 @@ ENV TERM=xterm
 ENV LANG=en_US.UTF-8
 
 RUN apt-get update && apt-get install -y wget curl make iproute2 vim-tiny inotify-tools
-RUN apt-get update && apt-get install -y --no-install-recommends locales
+RUN apt-get install -y --no-install-recommends locales git postgresql-client
+
 RUN echo $LANG UTF-8 > /etc/locale.gen \
     && locale-gen \
     && update-locale LANG=$LANG
