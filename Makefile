@@ -1,7 +1,7 @@
 .PHONY: build push
 
 
-TAG=1.4.4
+TAG=1.4
 REPO=renderedtext/elixir
 IMAGE=$(REPO):$(TAG)
 IMAGE_LATEST=$(REPO):latest
